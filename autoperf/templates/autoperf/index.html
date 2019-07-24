@@ -1,0 +1,40 @@
+{% load i18n static %}<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/main.css' %}" rel="stylesheet">
+    <title>INDEX</title>
+  </head>
+  <body>
+    <div class="upload-container">
+      <div class="upload-header">
+        <h2>HAR 2 JMX Converter</h2>
+      </div>
+      <div class="upload-content">
+        <h5>HAR 파일 하나를 선택하세요.</h5>
+        <form method="POST" enctype="multipart/form-data" class="post-form">{% csrf_token %}
+          <input type="file" name="source_file" class="file-input" required>
+          <button type="submit" class="primary submit-btn">Submit</button>
+        </form>
+        <div class="upload-response">
+          <div id="singleFileUploadError"></div>
+          <div id="singleFileUploadSuccess"></div>
+        </div>
+      </div>
+      <div>
+        <ul>
+          <li><a href="{% url 'autoperf:json_string' %}" class="primary" role="button">JSON 문자열로 변환</a></li>
+          <li><a href="{% url 'autoperf:yaml_string' %}" class="primary" role="button">YAML 형태로 변환</a></li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
+
+
+
+
+

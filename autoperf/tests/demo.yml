@@ -1,0 +1,23 @@
+execution:
+- concurrency: 5
+  ramp-up: 20s
+  hold-for: 2m
+  senario: TestPlan01
+
+scenarios:
+  TestPlan01:
+    timeout: 500ms
+    keepalive: true
+    requests:
+      - http://example.com/
+
+reporting:
+- module: final-stats
+- module: console
+
+
+settings:
+  check-interval: 5s
+  default-executor: jmeter
+
+provisioning: local

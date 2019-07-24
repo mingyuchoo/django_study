@@ -1,0 +1,21 @@
+{
+  "included-configs": [
+  "./base_config.yaml"
+  ],
+  "execution": [
+      {
+          "concurrency": 1,
+          "ramp-up": "1m",
+          "hold-for": "5m",
+          "iterations":20,
+          "write-xml-jtl": "full",
+          "scenario": "TestPlan01"
+      }
+  ],
+  "scenarios": {
+      "TestPlan01": {
+              "requests": [
+              ]
+      }
+  }
+}

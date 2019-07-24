@@ -1,0 +1,37 @@
+{% load i18n static %}<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/main.css' %}" rel="stylesheet">
+    <title>STRING TO JSON</title>
+  </head>
+  <body>
+    <div class="upload-container">
+      <div class="upload-header">
+        <h2>입력 문자열을 JSON 문자열 형태로 변환</h2>
+      </div>
+      <div class="upload-content">
+        <h5>코드를 붙여넣으세요.</h5>
+        <form method="POST" class="post-form">{% csrf_token %}
+          <p>
+            <textarea rows="4" cols="85" name="source" placeholder="문자열을 입력하세요." required></textarea>
+          </p>
+          <p>
+          <button type="submit" class="primary submit-btn">Submit</button>
+          </p>
+          <p>
+          <textarea rows="4" cols="85" name="target"  placeholder="결과를 복사해가세요." >{{ converted_data }}</textarea>
+          </p>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
+
+
+
+
+

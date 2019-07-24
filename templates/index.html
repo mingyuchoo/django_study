@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Django Study</title>
+</head>
+<body>
+<h1>Django Study</h1>
+<h2>App list</h2>
+<ul>
+    {% for app_name in app_list %}
+    <li><a href="/{{ app_name }}">{{ app_name }}</a></li>
+    {% endfor %}
+
+</ul>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Algorithm</title>
+</head>
+<body>
+<h1>Algorithm</h1>
+<ul>
+    {% for example in example_list %}
+    <li><a href="/algorithm/{{ example }}"/>{{ example }}</a></li>
+    {% endfor %}
+</ul>
+</body>
+</html>
