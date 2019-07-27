@@ -27,6 +27,7 @@ urlpatterns = [
     path('weblogs/', include('weblogs.urls', namespace='weblogs')),
     path('autoperf/', include('autoperf.urls', namespace='autoperf')),
     path('admin/', admin.site.urls),
+    path('snippets/', include('snippets.urls')),
 ]
 
 if settings.DEBUG:
